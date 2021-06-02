@@ -1,0 +1,354 @@
+@font-face {
+    font-family: Roboto;
+    src: url(https://fonts.googleapis.com/css?family=Roboto);
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    /* margin: 0;
+    padding: 0;
+    border: 0; */
+    overflow: hidden;
+}
+
+#headerContainer {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+#editDiv {
+    position: fixed;
+    top: 162px;
+    left: 35%;
+    box-shadow: 0 4px 7px 0px #88888863;
+}
+
+#textboxContainer textarea {
+    resize: none;
+}
+
+#textboxContainer textarea:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+#textboxContainer {
+    height: 110px;
+}
+
+
+#commentContainer {
+    list-style-type: none;
+    padding: 0;
+    max-height: 200px;
+    overflow: scroll;
+}
+
+#commentContainer li {
+    min-height: 28px;
+}
+.commentWrap {
+    word-wrap: break-word;
+}
+#editForm {
+    width: 550px
+}
+
+.delComment {
+    height: 15px;
+    width: 15px;
+    float: right;
+    margin-right: 15px;
+    padding: 0px;
+}
+
+.checkbox {
+    margin-right: 5px;
+}
+
+.editFormBtns {
+    /* float: right; */
+    margin-left: 10px;
+    margin-right: 10px;
+    /* display: block; */
+    /* margin: 0; */
+    padding: 0;
+}
+
+.textbox {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    height: 110px;
+    width: 100%;
+    border: 1px solid #6c757d;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+}
+#btnContainer {
+    /* float: right;
+    width: 70px; */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#canvasTitle input {
+    width: 500px;
+    /* height: 70px; */
+    background-color: rgba(0, 0, 255, 0) !important;
+    border: none;
+    color: black;
+    /* font-size: 20px; */
+}
+
+#canvasTitle ::placeholder {
+    color: black;
+    /* font-size: 20px; */
+}
+
+#canvasTitle #title {
+    font-weight: bold;
+}
+
+#canvasInfo {
+    /* display: block;
+    float: right;
+    margin-right: 50px; */
+    /* margin-top: 13px; */
+}
+
+/* .designInfo {
+    float: left;
+    width: 300px;
+} */
+
+#headerContainer {
+    /* opacity: 0.95; */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+#searchBar {
+    /* display: block; */
+    /* float: right; */
+    width: 300px;
+}
+
+/* #exportBtn {
+    margin-left: 8px;
+    margin-top: 13px;
+} */
+
+/* The container <div> - needed to position the dropdown content */
+#dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Button */
+/* .dropbtn {
+    background-color: grey;
+    color: white;
+    padding: 8px;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+} */
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: grey;}
+
+#sidepanel {
+    z-index: 1020; /* Stay on top */
+    width: 12rem;
+    height: calc(100% - 170px);
+    top: 152px;
+    left: 0;
+    overflow: hidden;
+}
+
+@media (min-width: 992px) {
+    #sidepanel {
+        width: 16rem;
+    }
+}
+
+#sidepanel-list {
+    overflow-y: scroll;
+}
+
+/* width */
+#sidepanel-list::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+#sidepanel-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+  /* Handle */
+#sidepanel-list::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+  /* Handle on hover */
+#sidepanel-list::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+#collapseBtnDiv {
+    position: absolute;
+    width: 100%;
+}
+
+#collapseBtn {
+    position: relative;
+    top: -20px;
+}
+
+#collapseBtn:focus, #collapseBtn.focus {
+    box-shadow: none;
+}
+
+/* .collapsing {
+    -webkit-transition: none;
+    transition: none;
+    visibility: hidden;
+}
+
+.collapse.show {
+    -webkit-transition: none;
+    transition: none;
+    visibility: visible;
+} */
+
+#collapseSidepanel.collapse {
+    visibility: hidden;
+}
+
+#collapseSidepanel.collapse.show {
+    visibility: visible;
+    display: block;
+}
+
+#collapseSidepanel.collapsing {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    -webkit-transition-property: height, visibility;
+    transition-property: height, visibility;
+    -webkit-transition-duration: 0.35s;
+    transition-duration: 0.35s;
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease;
+}
+
+#collapseSidepanel.collapsing.width {
+    -webkit-transition-property: width, visibility;
+    transition-property: width, visibility;
+    width: 0;
+    height: auto;
+}
+
+#stickyInfoInputCloseBtn {
+    position: absolute;
+    left: 355px;
+    top: -13px;
+}
+
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    padding: 2px 0px!important;
+    border-radius: 15px!important;
+    text-align: center!important;
+    font-size: 12px!important;
+    line-height: 1.42857!important;
+}
+
+#stickyColorRow .active {
+    box-shadow: 0 0 0 0.1rem rgba(130, 138, 145, 0.5);
+}
+
+#stickyTitleInput, #textInputBox {
+    background: none!important;
+    /* border: none!important; */
+}
+
+#stickyInfo {
+    position: fixed;
+    z-index: 1030;
+    width: 400px;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 0 0.1rem rgba(130, 138, 145, 0.2);
+}
+
+#editColorRow .active {
+    box-shadow: 0 0 0 0.1rem rgba(130, 138, 145, 0.5);
+}
+
+.userWrap {
+    font-size:12px;
+}
+
+.dateWrap {
+    font-size:12px;
+    font-style: italic;
+    color: #6c757d;
+    padding-left: 0.5rem;
+}
+
+.commentWrap {
+    font-size:15px;
+    padding-left: 0.5rem;
+}
+
+#editFormHeader {
+    height: 45px;
+}
+
+#editFormDetailBody {
+    position: absolute!important;
+    z-index: 1030;
+    top: 4rem;
+    left: 0.5rem;
+    background-color: whitesmoke;
+    width: 530px;
+    height: 270px;
+    box-shadow: 0 4px 7px 0px #88888863;
+}
+
+#editFormDetail {
+    padding-top: 0.5rem;
+    padding-right: 0.5rem;
+    height: 200px;
+    overflow-y: scroll;
+}
+
+.input-group-text{
+    font-size: 12px!important;
+}
